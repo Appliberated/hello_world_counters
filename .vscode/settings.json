@@ -1,0 +1,12 @@
+{
+  "dart.lineLength": 100,
+  "editor.rulers": [
+    80,
+    100,
+    120
+  ],
+  "cSpell.words": [
+    "helloworldcounters",
+    "techaurelian"
+  ],
+}
