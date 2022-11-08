@@ -1,4 +1,4 @@
-package com.techaurelian.helloworldcounters;
+package com.anaurelian.helloworldcounters;
 
 import io.flutter.embedding.android.FlutterActivity;
 
