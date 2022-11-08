@@ -14,10 +14,9 @@ class AppStrings {
 
   static const String drawerTitle = appName;
   static const String settingsItemTitle = 'Settings';
-  static const String helpItemTitle = 'Help & feedback';
+  static const String helpItemTitle = 'Online Help';
   static const String rateItemTitle = 'Rate app';
-
-  //#region Menu items and functionality
+  static const String viewSourceItemTitle = 'View app source';
 
   static const Map<MenuAction, String> menuActions = {
     MenuAction.reset: 'Reset counter',
@@ -35,7 +34,7 @@ class AppStrings {
 
   static const String helpURL = 'https://techaurelian.com/helloworldcounters/';
 
-  //#endregion
+  static const String viewSourceURL = 'https://techaurelian.com/helloworldcounters/view-source/';
 
   // -----------------------------------------------------------------------------------------------
   // Home Screen - Main

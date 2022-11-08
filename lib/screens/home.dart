@@ -89,6 +89,10 @@ class _HomeScreenState extends State<HomeScreen> {
         // Launch the Google Play Store page to allow the user to rate the app
         launchUrlExternal(context, AppStrings.rateAppURL);
         break;
+      case DrawerExtraActions.viewSource:
+        // Launch the app source code repo url
+        launchUrlExternal(context, AppStrings.viewSourceURL);
+        break;
     }
   }
 

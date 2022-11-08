@@ -10,7 +10,7 @@ import '../utils/utils.dart';
 import 'color_list_tile.dart';
 
 /// Drawer extra actions enumeration.
-enum DrawerExtraActions { settings, help, rate }
+enum DrawerExtraActions { settings, help, rate, viewSource }
 
 /// A material design drawer that shows navigation links for all available counters.
 class CountersDrawer extends StatelessWidget {
@@ -64,6 +64,12 @@ class CountersDrawer extends StatelessWidget {
               leading: const Icon(Icons.rate_review),
               title: const Text(AppStrings.rateItemTitle),
               onTap: () => _onExtraActionTap(context, DrawerExtraActions.rate),
+            ),
+            const Divider(),
+            ListTile(
+              leading: const Icon(Icons.code),
+              title: const Text(AppStrings.viewSourceItemTitle),
+              onTap: () => _onExtraActionTap(context, DrawerExtraActions.viewSource),
             ),
           ],
         ),
