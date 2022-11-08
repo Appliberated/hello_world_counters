@@ -1,6 +1,6 @@
 # Hello World Counters
 
-Hello World Counters is an easy to use tally counter app for Android. It gives you a different counter for each of the unambiguous color terms in English: White, Black, Red, Green, Yellow, Blue, Brown, Purple, Pink, Orange, and Grey. This means you can count people, sheep, kisses, or smiles, and nobody will know what you are counting!
+Hello World Counters is an easy to use tally counter app for Android. It gives you a different counter for each of the unambiguous color terms in English: Black, White, Red, Green, Yellow, Blue, Brown, Purple, Pink, Orange, and Grey. This means you can count people, sheep, kisses, or smiles, and nobody will know what you are counting!
 
 You can increment or decrement the counter, reset its value back to zero, or share it by email, messengers, or in social networks.
 

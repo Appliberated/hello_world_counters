@@ -18,13 +18,13 @@ class AppSettings {
 
   /// Saves the counter tap mode to persistent storage.
   Future<void> _saveCounterTapMode() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_counterTapModeKey, _counterTapMode);
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    await preferences.setBool(_counterTapModeKey, _counterTapMode);
   }
 
   /// Loads app settings from persistent storage.
   Future<void> load() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    _counterTapMode = prefs.getBool(_counterTapModeKey) ?? false;
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    _counterTapMode = preferences.getBool(_counterTapModeKey) ?? false;
   }
 }

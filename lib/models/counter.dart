@@ -2,13 +2,15 @@
 // Use of this source code is governed by an MIT-style license that can be
 // found in the LICENSE file.
 
+// cSpell:ignore endregion
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Counter (color) types.
-enum CounterType { white, black, red, green, yellow, blue, brown, purple, pink, orange, grey }
+enum CounterType { black, white, red, green, yellow, blue, brown, purple, pink, orange, grey }
 
 /// An integer counter class.
 class Counter {
@@ -53,13 +55,13 @@ class Counter {
 
   /// Saves the counter value to persistent storage.
   Future<void> _saveValue() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setInt(_counterKey(type), value);
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    await preferences.setInt(_counterKey(type), value);
   }
 
   /// Loads the counter value from persistent storage.
-  void loadValue(SharedPreferences prefs) {
-    _value = prefs.getInt(_counterKey(type)) ?? 0;
+  void loadValue(SharedPreferences preferences) {
+    _value = preferences.getInt(_counterKey(type)) ?? 0;
   }
 
   //#endregion
@@ -69,13 +71,13 @@ class Counter {
   /// The counter type.
   final CounterType type;
 
-  /// Returns the ARGB color value of the current counter.
+  /// Returns the [Color] value of the current counter.
   Color get color => _counterColors[type]!;
 
   /// Returns the name of the current counter (e.g. "Red Counter").
   String get name => nameOf(type);
 
-  /// Returns the ARGB color value for the specified counter type.
+  /// Returns the [Color] value for the specified counter type.
   static Color colorOf(CounterType type) => _counterColors[type]!;
 
   /// Returns the name of the specified counter type (e.g. "Black Counter").
@@ -84,10 +86,10 @@ class Counter {
     return '${name.substring(0, 1).toUpperCase()}${name.substring(1).toLowerCase()} Counter';
   }
 
-  /// A map with the corresponding ARGB color value for each counter type.
+  /// A map with the corresponding [Color] value for each counter type.
   static const Map<CounterType, Color> _counterColors = {
-    CounterType.white: Colors.white,
     CounterType.black: Colors.black,
+    CounterType.white: Colors.white,
     CounterType.red: Colors.red,
     CounterType.green: Colors.green,
     CounterType.yellow: Colors.yellow,
@@ -119,7 +121,7 @@ class Counters {
   final Map<CounterType, Counter> _counters = <CounterType, Counter>{};
 
   /// The current counter type.
-  CounterType _currentType = CounterType.white;
+  CounterType _currentType = CounterType.blue;
 
   /// Returns the current counter.
   Counter get current => _counters[_currentType]!;
@@ -135,21 +137,21 @@ class Counters {
 
   /// Saves the current counter type to persistent storage.
   Future<void> _saveCurrentType() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setInt(currentCounterKey, _currentType.index);
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    await preferences.setInt(currentCounterKey, _currentType.index);
   }
 
   /// Loads counter states from persistent storage.
   Future<void> load() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
+    SharedPreferences preferences = await SharedPreferences.getInstance();
 
-    /// Load the current counter type
-    final int counterIndex = prefs.getInt(currentCounterKey) ?? 0;
+    /// Load the current counter type, or set the default Blue counter
+    final int counterIndex = preferences.getInt(currentCounterKey) ?? CounterType.blue.index;
     _currentType = CounterType.values[counterIndex];
 
     /// Loads the values of all counters
     for (var counterType in _counters.keys) {
-      _counters[counterType]?.loadValue(prefs);
+      _counters[counterType]?.loadValue(preferences);
     }
   }
 }
