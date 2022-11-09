@@ -42,6 +42,8 @@ class CountersDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool isAndroid = Theme.of(context).platform == TargetPlatform.android;
+
     return Drawer(
       child: ListTileTheme(
         selectedColor: Colors.black,
@@ -61,16 +63,17 @@ class CountersDrawer extends StatelessWidget {
               onTap: () => _onExtraActionTap(context, DrawerExtraActions.help),
             ),
             ListTile(
-              leading: const Icon(Icons.rate_review),
-              title: const Text(AppStrings.rateItemTitle),
-              onTap: () => _onExtraActionTap(context, DrawerExtraActions.rate),
-            ),
-            const Divider(),
-            ListTile(
               leading: const Icon(Icons.code),
               title: const Text(AppStrings.viewSourceItemTitle),
               onTap: () => _onExtraActionTap(context, DrawerExtraActions.viewSource),
             ),
+            if (isAndroid) const Divider(),
+            if (isAndroid)
+              ListTile(
+                leading: const Icon(Icons.rate_review_outlined),
+                title: const Text(AppStrings.rateItemTitle),
+                onTap: () => _onExtraActionTap(context, DrawerExtraActions.rate),
+              ),
           ],
         ),
       ),

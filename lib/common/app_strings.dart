@@ -15,7 +15,7 @@ class AppStrings {
   static const String drawerTitle = appName;
   static const String settingsItemTitle = 'Settings';
   static const String helpItemTitle = 'Online Help';
-  static const String rateItemTitle = 'Rate app';
+  static const String rateItemTitle = 'Rate or review';
   static const String viewSourceItemTitle = 'View app source';
 
   static const Map<MenuAction, String> menuActions = {
