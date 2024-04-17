@@ -10,13 +10,13 @@ class ColorListTile extends StatelessWidget {
   ///
   /// The [color] and [title] parameters must not be null.
   const ColorListTile({
-    Key? key,
+    super.key,
     required this.color,
     required this.title,
     required this.subtitle,
     this.selected = false,
     this.onTap,
-  }) : super(key: key);
+  });
 
   /// The ARGB color value to fill the circular color swatch.
   final Color color;
@@ -43,10 +43,6 @@ class ColorListTile extends StatelessWidget {
           color: color,
           border: color == Colors.white ? Border.all() : null,
         ),
-        // title: Text(
-        //   title,
-        //   style: TextStyle(color: Theme.of(context).textTheme.bodyText1!.color),
-        // ),
         title: Text(title),
         subtitle: Text(subtitle),
         onTap: onTap,
@@ -61,12 +57,11 @@ class _ColorFilledCircle extends StatelessWidget {
   ///
   /// The [color] parameter must not be null.
   const _ColorFilledCircle({
-    Key? key,
+    super.key, // ignore: unused_element
     required this.color,
-    // ignore: unused_element
-    this.diameter = 40.0,
+    this.diameter = 40.0, // ignore: unused_element
     this.border,
-  }) : super(key: key);
+  });
 
   /// The color with which to fill the circle.
   final Color color;

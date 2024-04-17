@@ -10,11 +10,11 @@ import '../utils/utils.dart';
 class CounterDisplay extends StatelessWidget {
   /// Creates a counter display widget.
   const CounterDisplay({
-    Key? key,
+    super.key,
     required this.value,
     required this.color,
     this.isPortrait = true,
-  }) : super(key: key);
+  });
 
   /// The color with which to fill the counter container.
   final Color color;
@@ -27,8 +27,9 @@ class CounterDisplay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle? counterStyle =
-        isPortrait ? Theme.of(context).textTheme.headline1 : Theme.of(context).textTheme.headline2;
+    final TextStyle? counterStyle = isPortrait
+        ? Theme.of(context).textTheme.displayLarge
+        : Theme.of(context).textTheme.displayMedium;
 
     return Container(
       alignment: Alignment.center,

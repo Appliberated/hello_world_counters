@@ -9,9 +9,9 @@ import '../common/app_strings.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({
-    Key? key,
+    super.key,
     required this.appSettings,
-  }) : super(key: key);
+  });
 
   final AppSettings appSettings;
 

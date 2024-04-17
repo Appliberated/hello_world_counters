@@ -20,7 +20,7 @@ enum MenuAction { reset, share }
 
 /// The app home screen widget.
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();

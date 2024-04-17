@@ -15,8 +15,8 @@ class AppStrings {
   static const String drawerTitle = appName;
   static const String settingsItemTitle = 'Settings';
   static const String helpItemTitle = 'Online Help';
-  static const String rateItemTitle = 'Rate or review';
-  static const String viewSourceItemTitle = 'View app source';
+  static const String rateItemTitle = 'Rate App';
+  static const String viewSourceItemTitle = 'View Source Code';
 
   static const Map<MenuAction, String> menuActions = {
     MenuAction.reset: 'Reset counter',

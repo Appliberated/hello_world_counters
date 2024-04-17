@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 
 import 'common/app_strings.dart';
 import 'screens/home.dart';
-import 'utils/utils.dart';
 
 void main() {
   runApp(const CountersApp());
@@ -14,21 +13,25 @@ void main() {
 
 /// The app widget.
 class CountersApp extends StatelessWidget {
-  const CountersApp({Key? key}) : super(key: key);
+  const CountersApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: AppStrings.appName,
-      theme: ThemeData(
-        brightness: Brightness.light,
-        primarySwatch: Colors.white.createMaterialColor(),
-        textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(foregroundColor: Colors.black),
+
+      // A black and white theme to go with the app's colored counters
+      theme: ThemeData.from(
+        colorScheme: ColorScheme.light(
+          primary: Colors.black,
+          surface: Colors.white,
+          onSurface: Colors.black,
+          surfaceTint: Colors.white,
+          primaryContainer: Colors.white,
+          onPrimaryContainer: Colors.black,
+          outlineVariant: Colors.grey.shade200,
         ),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        typography: Typography.material2018(),
       ),
       home: const HomeScreen(),
     );

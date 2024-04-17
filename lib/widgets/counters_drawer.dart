@@ -16,12 +16,12 @@ enum DrawerExtraActions { settings, help, rate, viewSource }
 class CountersDrawer extends StatelessWidget {
   /// Creates a counters drawer widget.
   const CountersDrawer({
-    Key? key,
+    super.key,
     required this.title,
     required this.counters,
     required this.onSelected,
     this.onExtraSelected,
-  }) : super(key: key);
+  });
 
   /// The title of the drawer displayed in the drawer header.
   final String title;
@@ -63,7 +63,7 @@ class CountersDrawer extends StatelessWidget {
               onTap: () => _onExtraActionTap(context, DrawerExtraActions.help),
             ),
             ListTile(
-              leading: const Icon(Icons.code),
+              leading: const Icon(Icons.flutter_dash),
               title: const Text(AppStrings.viewSourceItemTitle),
               onTap: () => _onExtraActionTap(context, DrawerExtraActions.viewSource),
             ),
@@ -86,7 +86,7 @@ class CountersDrawer extends StatelessWidget {
       child: DrawerHeader(
         child: Text(
           title,
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
       ),
     );
