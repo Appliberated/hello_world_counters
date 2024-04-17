@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.pop(context);
   }
 
-  /// Performs the tasks of the popup menu items (reset, share, rate, and help).
+  /// Performs the tasks of the popup menu items (reset, share).
   void popupMenuSelection(MenuAction item) {
     switch (item) {
       case MenuAction.reset:
@@ -81,9 +81,9 @@ class _HomeScreenState extends State<HomeScreen> {
         // Load the Settings screen
         _loadSettingsScreen();
         break;
-      case DrawerExtraActions.help:
-        // Launch the app online help url
-        launchUrlExternal(context, AppStrings.helpURL);
+      case DrawerExtraActions.about:
+        // Launch the app's about page
+        launchUrlExternal(context, AppStrings.aboutURL);
         break;
       case DrawerExtraActions.rate:
         // Launch the Google Play Store page to allow the user to rate the app

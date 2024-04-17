@@ -14,7 +14,7 @@ class AppStrings {
 
   static const String drawerTitle = appName;
   static const String settingsItemTitle = 'Settings';
-  static const String helpItemTitle = 'Online Help';
+  static const String aboutItemTitle = 'About This App';
   static const String rateItemTitle = 'Rate App';
   static const String viewSourceItemTitle = 'View Source Code';
 
@@ -29,10 +29,9 @@ class AppStrings {
 
   static String shareText(String name, String value) => 'The $name is $value';
 
-  static const String rateAppURL =
-      'https://play.google.com/store/apps/details?id=com.anaurelian.helloworldcounters';
+  static const String rateAppURL = 'https://appliberated.com/helloworldcounters/rate/';
 
-  static const String helpURL = 'https://appliberated.com/helloworldcounters/';
+  static const String aboutURL = 'https://appliberated.com/helloworldcounters/';
 
   static const String viewSourceURL = 'https://github.com/Appliberated/hello_world_counters';
 
