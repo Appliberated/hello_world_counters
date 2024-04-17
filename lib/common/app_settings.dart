@@ -1,6 +1,6 @@
-// Copyright 2020-2022 TechAurelian. All rights reserved.
-// Use of this source code is governed by an MIT-style license that can be
-// found in the LICENSE file.
+// Copyright 2020-2024 Appliberated (https://appliberated.com). All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+// @author TechAurelian <dev@techaurelian.com> (https://techaurelian.com)
 
 import 'package:shared_preferences/shared_preferences.dart';
 

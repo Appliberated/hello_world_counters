@@ -1,6 +1,6 @@
-// Copyright 2020-2022 TechAurelian. All rights reserved.
-// Use of this source code is governed by an MIT-style license that can be
-// found in the LICENSE file.
+// Copyright 2020-2024 Appliberated (https://appliberated.com). All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+// @author TechAurelian <dev@techaurelian.com> (https://techaurelian.com)
 
 import '../screens/home.dart';
 
@@ -32,9 +32,9 @@ class AppStrings {
   static const String rateAppURL =
       'https://play.google.com/store/apps/details?id=com.anaurelian.helloworldcounters';
 
-  static const String helpURL = 'https://techaurelian.com/helloworldcounters/';
+  static const String helpURL = 'https://appliberated.com/helloworldcounters/';
 
-  static const String viewSourceURL = 'https://techaurelian.com/helloworldcounters/view-source/';
+  static const String viewSourceURL = 'https://github.com/Appliberated/hello_world_counters';
 
   // -----------------------------------------------------------------------------------------------
   // Home Screen - Main
