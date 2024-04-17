@@ -108,6 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final bool isPortrait = MediaQuery.of(context).size.height >= 500;
+    final bool isLargeScreen = MediaQuery.of(context).size.longestSide >= 1024;
 
     final CounterDisplay counterDisplay = CounterDisplay(
       value: _counters.current.value,
@@ -124,7 +125,8 @@ class _HomeScreenState extends State<HomeScreen> {
               child: counterDisplay,
             )
           : counterDisplay,
-      floatingActionButton: !(_appSettings.counterTapMode) ? _buildFABs(isPortrait) : null,
+      floatingActionButton:
+          !(_appSettings.counterTapMode) ? _buildFABs(isPortrait, isLargeScreen) : null,
     );
   }
 
@@ -165,25 +167,31 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   /// Builds the two main floating action buttons for increment and decrement.
-  Widget _buildFABs(bool isPortrait) {
-    return Flex(
-      direction: isPortrait ? Axis.vertical : Axis.horizontal,
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: <Widget>[
-        FloatingActionButton(
-          heroTag: AppStrings.decrementHeroTag,
-          onPressed: () => setState(() => _counters.current.decrement()),
-          tooltip: AppStrings.decrementTooltip,
-          child: const Icon(Icons.remove),
-        ),
-        isPortrait ? const SizedBox(height: 16.0) : const SizedBox(width: 16.0),
-        FloatingActionButton(
-          heroTag: AppStrings.incrementHeroTag,
-          onPressed: () => setState(() => _counters.current.increment()),
-          tooltip: AppStrings.incrementTooltip,
-          child: const Icon(Icons.add),
-        )
-      ],
+  Widget _buildFABs(bool isPortrait, bool isLargeScreen) {
+    return Padding(
+      // We're giving the FABs a bit more breathing room on larger screens
+      padding: isLargeScreen
+          ? const EdgeInsets.only(bottom: 16.0, right: 16.0)
+          : const EdgeInsets.all(0.0),
+      child: Flex(
+        direction: isPortrait ? Axis.vertical : Axis.horizontal,
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: <Widget>[
+          FloatingActionButton.large(
+            heroTag: AppStrings.decrementHeroTag,
+            onPressed: () => setState(() => _counters.current.decrement()),
+            tooltip: AppStrings.decrementTooltip,
+            child: const Icon(Icons.remove),
+          ),
+          isPortrait ? const SizedBox(height: 16.0) : const SizedBox(width: 16.0),
+          FloatingActionButton.large(
+            heroTag: AppStrings.incrementHeroTag,
+            onPressed: () => setState(() => _counters.current.increment()),
+            tooltip: AppStrings.incrementTooltip,
+            child: const Icon(Icons.add),
+          )
+        ],
+      ),
     );
   }
 }

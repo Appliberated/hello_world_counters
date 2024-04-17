@@ -8,12 +8,12 @@ import 'common/app_strings.dart';
 import 'screens/home.dart';
 
 void main() {
-  runApp(const CountersApp());
+  runApp(const HelloWorldCountersApp());
 }
 
 /// The app widget.
-class CountersApp extends StatelessWidget {
-  const CountersApp({super.key});
+class HelloWorldCountersApp extends StatelessWidget {
+  const HelloWorldCountersApp({super.key});
 
   @override
   Widget build(BuildContext context) {
