@@ -2,8 +2,7 @@
   "recommendations": [
     "dart-code.dart-code",
     "dart-code.flutter",
-    "streetsidesoftware.code-spell-checker",
-    "nhoizey.gremlins",
-    "adam-bender.commit-message-editor"
+    "mhutchie.git-graph",
+    "nhoizey.gremlins"
   ]
 }

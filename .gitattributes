@@ -1,0 +1,8 @@
+# Normalize line endings to LF for all files considered text by Git
+* text=auto eol=lf
+
+# Never perform LF normalization on these files
+*.ico    binary
+*.jar    binary
+*.png    binary
+*.zip    binary
