@@ -1,6 +1,7 @@
-// Copyright 2020-2024 Appliberated (https://appliberated.com). All rights reserved.
-// Licensed under the MIT License. See LICENSE in the project root for license information.
-// @author TechAurelian <dev@techaurelian.com> (https://techaurelian.com)
+// Copyright 2020-2024 Hellogramming. All rights reserved.
+// Use of this source code is governed by an MIT-style
+// license that can be found in the LICENSE file or at
+// https://hellogramming.com/helloworldcounters/license/.
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
