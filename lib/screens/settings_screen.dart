@@ -6,7 +6,7 @@
 import 'package:flutter/material.dart';
 
 import '../common/app_settings.dart';
-import '../common/app_strings.dart';
+import '../common/strings.dart' as strings;
 
 /// The settings screen widget that allows the user to change app settings.
 ///
@@ -31,7 +31,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(AppStrings.settingsTitle),
+        title: const Text(strings.settingsTitle),
       ),
       body: Container(
         alignment: Alignment.topCenter,
@@ -44,8 +44,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
               SwitchListTile(
                 activeColor: Colors.black,
                 value: widget.appSettings.counterTapMode,
-                title: const Text(AppStrings.counterTapModeTitle),
-                subtitle: const Text(AppStrings.counterTapModeSubtitle),
+                title: const Text(strings.counterTapModeTitle),
+                subtitle: const Text(strings.counterTapModeSubtitle),
                 onChanged: (bool value) =>
                     setState(() => widget.appSettings.counterTapMode = value),
               )

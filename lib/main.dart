@@ -5,7 +5,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'common/app_strings.dart';
+import 'common/strings.dart' as strings;
 import 'screens/home.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class HelloWorldCountersApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: AppStrings.appName,
+      title: strings.appName,
 
       // A black and white theme to go with the app's colored counters
       theme: ThemeData.from(
