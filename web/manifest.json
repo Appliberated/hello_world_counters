@@ -3,9 +3,9 @@
     "short_name": "Hello World Counters",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#2196F3",
-    "theme_color": "#2196F3",
-    "description": "A new Flutter project.",
+    "background_color": "#FFFFFF",
+    "theme_color": "#FFFFFF",
+    "description": "My first Hello World Flutter app: An easy to use tally counter app.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
