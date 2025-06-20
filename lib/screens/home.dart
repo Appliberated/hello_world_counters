@@ -85,15 +85,15 @@ class _HomeScreenState extends State<HomeScreen> {
         break;
       case DrawerExtraActions.about:
         // Open the app's about page
-        launchUrlExternal(context, urls.aboutURL);
+        launchUrlExternal(context, urls.aboutUrl);
         break;
-      case DrawerExtraActions.viewSource:
-        // Open the app source code repo url
-        launchUrlExternal(context, urls.viewSourceURL);
+      case DrawerExtraActions.starApp:
+        // Open the app source code repo url on GitHub to allow the user to star it
+        launchUrlExternal(context, urls.starAppUrl);
         break;
-      case DrawerExtraActions.feedback:
-        // Open the app feedback page
-        launchUrlExternal(context, urls.feedbackURL);
+      case DrawerExtraActions.rateApp:
+        // Open the app's rate page
+        launchUrlExternal(context, urls.rateAppUrl);
         break;
     }
   }

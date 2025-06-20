@@ -7,10 +7,10 @@
 library;
 
 /// The app's home page URL.
-const String aboutURL = 'https://www.appliberated.com/helloworldcounters/';
+const String aboutUrl = 'https://www.appliberated.com/helloworldcounters/';
 
 /// The URL to the source code repository of the app.
-const String viewSourceURL = 'https://github.com/Appliberated/hello_world_counters';
+const String starAppUrl = 'https://github.com/Appliberated/hello_world_counters';
 
-/// The URL for sending feedback.
-const String feedbackURL = 'https://www.appliberated.com/helloworldcounters/feedback/';
+/// The URL for rating the app (a redirect).
+const String rateAppUrl = 'https://www.appliberated.com/helloworldcounters/rate/';

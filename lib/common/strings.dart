@@ -17,8 +17,8 @@ const String appName = 'Hello World Counters';
 const String drawerTitle = appName;
 const String settingsItemTitle = 'Settings';
 const String aboutItemTitle = 'About this Hello World app';
-const String viewSourceItemTitle = 'View source code';
-const String feedbackItemTitle = 'Send feedback';
+const String starAppItemTitle = 'Star on GitHub';
+const String rateAppItemTitle = 'Rate app';
 
 const Map<MenuAction, String> menuActions = {
   MenuAction.reset: 'Reset counter',
