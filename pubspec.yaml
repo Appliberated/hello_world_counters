@@ -1,5 +1,5 @@
 name: hello_world_counters
-description: "My first Hello World Flutter app: An easy to use tally counter app."
+description: "A simple tally counter app, created as one of my first Hello World projects with Flutter, featuring color-coded counters for discreet counting."
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.

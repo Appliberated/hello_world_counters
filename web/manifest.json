@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#FFFFFF",
     "theme_color": "#FFFFFF",
-    "description": "My first Hello World Flutter app: An easy to use tally counter app.",
+    "description": "A simple tally counter, created as one of my first Hello World apps in Flutter. Use the different colored counters to discreetly keep track of anything you want.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

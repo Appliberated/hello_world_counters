@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
         // Share the current counter value using the platform's share sheet.
         final String name = _counters.current.name;
         final String value = toDecimalString(context, _counters.current.value);
-        Share.share(strings.shareText(name, value), subject: name);
+        SharePlus.instance.share(ShareParams(text: strings.shareText(name, value), subject: name));
         break;
     }
   }
