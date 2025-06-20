@@ -1,7 +1,7 @@
-// Copyright 2020-2024 Hellogramming. All rights reserved.
+// Copyright 2020-2025 Appliberated. All rights reserved.
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file or at
-// https://hellogramming.com/helloworldcounters/license/.
+// https://www.appliberated.com/helloworldcounters/license/.
 
 import 'package:flutter/material.dart';
 
@@ -58,9 +58,9 @@ class _ColorFilledCircle extends StatelessWidget {
   ///
   /// The [color] parameter must not be null.
   const _ColorFilledCircle({
-    super.key, // ignore: unused_element
+    super.key, // ignore: unused_element_parameter
     required this.color,
-    this.diameter = 40.0, // ignore: unused_element
+    this.diameter = 40.0, // ignore: unused_element_parameter
     this.border,
   });
 

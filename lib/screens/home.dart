@@ -1,7 +1,7 @@
-// Copyright 2020-2024 Hellogramming. All rights reserved.
+// Copyright 2020-2025 Appliberated. All rights reserved.
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file or at
-// https://hellogramming.com/helloworldcounters/license/.
+// https://www.appliberated.com/helloworldcounters/license/.
 
 import 'package:flutter/material.dart';
 
@@ -100,8 +100,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   /// Navigates to the Settings screen, and refreshes on return.
   Future<void> _loadSettingsScreen() async {
-    await Navigator.push<void>(context,
-        MaterialPageRoute(builder: (context) => SettingsScreen(appSettings: _appSettings)));
+    await Navigator.push<void>(
+      context,
+      MaterialPageRoute(builder: (context) => SettingsScreen(appSettings: _appSettings)),
+    );
     setState(() {
       /* Refresh after returning from Settings screen. */
     });
@@ -127,8 +129,9 @@ class _HomeScreenState extends State<HomeScreen> {
               child: counterDisplay,
             )
           : counterDisplay,
-      floatingActionButton:
-          !(_appSettings.counterTapMode) ? _buildFABs(isPortrait, isLargeScreen) : null,
+      floatingActionButton: !(_appSettings.counterTapMode)
+          ? _buildFABs(isPortrait, isLargeScreen)
+          : null,
     );
   }
 
@@ -191,7 +194,7 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () => setState(() => _counters.current.increment()),
             tooltip: strings.incrementTooltip,
             child: const Icon(Icons.add),
-          )
+          ),
         ],
       ),
     );
