@@ -28,7 +28,7 @@ Hello World Counters is one of my first Hello World apps made with Flutter.
 
 ## Screenshots
 
-<img width="240" src="repo-assets/helloworldcounters-android-phone-screenshot-red-counter.png" alt="Hello World Counters - Android phone screenshot - Red counter"> <img width="240" src="repo-assets/helloworldcounters-android-phone-screenshot-orange-counter.png" alt="Hello World Counters - Android phone screenshot - Orange counter"> <img width="240" src="repo-assets/helloworldcounters-android-phone-screenshot-app-drawer.png" alt="Hello World Counters - Android phone screenshot - App drawer">
+<img width="240" src="repo-assets/helloworldcounters-android-phone-screenshot-blue-counter.png" alt="Hello World Counters - Android phone screenshot - Blue counter"> <img width="240" src="repo-assets/helloworldcounters-android-phone-screenshot-yellow-counter.png" alt="Hello World Counters - Android phone screenshot - Yellow counter"> <img width="240" src="repo-assets/helloworldcounters-android-phone-screenshot-app-drawer.png" alt="Hello World Counters - Android phone screenshot - App drawer">
 
 ## Try Hello World Counters
 
